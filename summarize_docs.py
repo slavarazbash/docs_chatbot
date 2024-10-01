@@ -16,6 +16,10 @@ model_to_use = "gpt-4o-mini"
 output_pickle_file_name = "texts_and_embeddings.pkl"
 output_pickle_file_path = os.path.join(output_dir, output_pickle_file_name)
 
+# Check if output_dir is missing. mkdir if missing.
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
 summaries = []
 summary_metadata = []
 
